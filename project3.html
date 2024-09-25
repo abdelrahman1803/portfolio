@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Designs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-detail" class="project-detail">
+        <div class="container">
+            <h2>Social Media Designs</h2>
+            <p>
+                In this section, I showcase a collection of social media designs created for various clients and campaigns.
+                Each design is tailored to meet the unique needs and branding guidelines of the client, ensuring a cohesive and engaging online presence.
+            </p>
+
+            <!-- Main Image -->
+            <img src="social media/B&T.jpg" alt="Main Branding Image" class="main-image">
+            <img src="social media/Cover.jpg" alt="Main Branding Image" class="main-image">
+            <img src="social media/Main.jpg" alt="Main Branding Image" class="main-image">
+            
+            <!-- Project Gallery -->
+            <div class="gallery">
+                <!-- <img src="social media/Cover.jpg" alt="Branding Mockup 1" class="gallery-image" onclick="openModal(this)"> -->
+                <!-- <img src="social media/Main.jpg" alt="Branding Mockup 2" class="gallery-image" onclick="openModal(this)">   -->
+                <img src="social media/islam.jpg" alt="Branding Mockup 3" class="gallery-image" onclick="openModal(this)">
+                <img src="social media/mazen.jpg" alt="Branding Mockup 4" class="gallery-image" onclick="openModal(this)">
+                <img src="social media/omar.jpg" alt="Branding Mockup 5" class="gallery-image" onclick="openModal(this)">
+                <img src="social media/Ola.jpg" alt="Branding Mockup 6" class="gallery-image" onclick="openModal(this)">
+                <img src="social media/Artboard 1.png" alt="Branding Mockup 7" class="gallery-image" onclick="openModal(this)">
+                <img src="social media/donuts.jpg" alt="Branding Mockup 8" class="gallery-image" onclick="openModal(this)">
+                <img src="social media/teeth.jpg" alt="Branding Mockup 9" class="gallery-image" onclick="openModal(this)">
+                <img src="social media/New Project.jpg" alt="Branding Mockup 10" class="gallery-image" onclick="openModal(this)">
+            </div>
+
+            <!-- Project Description -->
+            <div class="project-description">
+                
+                <h3>Tools Used</h3>
+                <ul>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Display -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Abdelrahman Ashraf | <a href="https://instagram.com/abdelrahman_ashraf_03" target="_blank">Instagram</a> | <a href="https://behance.net/abdelrahmanashraf03" target="_blank">Behance</a> | <a href="https://facebook.com/profile.php?id=100025284374011" target="_blank">Facebook</a> | <a href="https://t.me/A_Ashraf03" target="_blank">Telegram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Open modal function
+        function openModal(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = `${img.alt} - Dimensions: ${img.naturalWidth} x ${img.naturalHeight}px`;
+        }
+
+        // Close modal function
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

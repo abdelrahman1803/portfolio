@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event for CIS Team </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-detail" class="project-detail">
+        <div class="container">
+            <h2>Event for CIS Team</h2>
+            <p>
+                This is a teamwork project involved creating a package for Technical Gates 4.0, an innovative event inspired by the movie Interstellar.
+                Organized by the CIS team MU, the goal was to craft a visual identity that captured the event’s mission, values, and futuristic theme.
+            </p>
+
+            <!-- Main Image -->
+            <img src="Technical Gates 4/TechnicalGates4.jpg" alt="Main Branding Image" class="main-image">
+
+            <!-- Project Gallery -->
+            <div class="gallery">
+                <img src="Technical Gates 4/Registration.jpg" alt="Branding Mockup 1" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/Registration1.jpg" alt="Branding Mockup 2" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/sponsor.jpg" alt="Branding Mockup 3" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/Regestraion-Countdown.jpg" alt="Branding Mockup 4" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/speakers(1person).jpg" alt="Branding Mockup 5" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/speakers(2person).jpg" alt="Branding Mockup 6" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/speakers(3person).jpg" alt="Branding Mockup 7" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/check.jpg" alt="Branding Mockup 8" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/Agenda_final.jpg" alt="Branding Mockup 9" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/certificate(member).jpg" alt="Branding Mockup 10" class="gallery-image" onclick="openModal(this)">
+                <img src="Technical Gates 4/certificate(mentor).jpg" alt="Branding Mockup 11" class="gallery-image" onclick="openModal(this)">
+            </div>
+
+            <!-- Project Description -->
+            <div class="project-description">
+                <h1>Project Overview</h1>
+                
+                    <b>Project Name:</b> Technical Gates 4.0 <br>
+                    <br>
+                    <b>Theme:</b> Inspired by the movie Interstellar <br>
+                    <br>
+                    <b>Organizers:</b> CIS Team at MU <br>
+                    <br>
+                    <b>Objective:</b> To create a comprehensive branding package that captures the event’s mission, values, and futuristic theme. <br>
+                    <br>
+                    <b>Role:</b> Lead Designer <br>
+                    <br>
+                    <b>Teamwork:</b> Collaborative effort with a talented team [Janna Elgarhy - Eman Yaser - Yassmin Ghaly] <br>
+                    <br>
+                    <b>Key Deliverables:</b>
+                    
+                    <ul>
+                    <li>Event logos</li>
+                    <li>Promotional materials</li>
+                    <li>Digital assets</li>
+                    </ul>
+                    
+                    <b>Design Goal:</b> To evoke the awe and wonder of space exploration, aligning with the event’s theme of pushing the boundaries of technology and creativity. <br>
+                    <br>
+                    <b>Outcome:</b> A cohesive visual narrative that ensured a memorable and engaging experience for all participants.
+                </p>
+
+                <h1>Tools Used</h1>
+
+                <ul>
+                    <li>Adobe Photoshop</li>
+                </ul>
+
+                <h1>Challenges and Solutions</h1>
+                <p>
+                    One of the main challenges was ensuring the brand was modern yet timeless. Through multiple iterations, 
+                    we balanced contemporary design trends with a classic, enduring feel that will stand the test of time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Display -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Abdelrahman Ashraf | <a href="https://instagram.com/abdelrahman_ashraf_03" target="_blank">Instagram</a> | <a href="https://behance.net/abdelrahmanashraf03" target="_blank">Behance</a> | <a href="https://facebook.com/profile.php?id=100025284374011" target="_blank">Facebook</a> | <a href="https://t.me/A_Ashraf03" target="_blank">Telegram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Open modal function
+        function openModal(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = `${img.alt} - Dimensions: ${img.naturalWidth} x ${img.naturalHeight}px`;
+        }
+
+        // Close modal function
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
